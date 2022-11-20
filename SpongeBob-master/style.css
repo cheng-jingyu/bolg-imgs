@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(253, 219, 33, 1);
+}
+
+
+.face {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 100px auto;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  text-align: center;
+}
+
+.eyes {
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  position: relative;
+}
+
+.eyes::before {
+  z-index: 10;
+  position: absolute;
+  top: 42.5%;
+  left: 42.5%;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.eyes::after {
+  position: absolute;
+  top: 37.5%;
+  left: 37.5%;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: #0099ff;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.eyebrow {
+  position: absolute;
+  top: -50px;
+  left: 85px;
+  width: 15px;
+  height: 50px;
+  background-color: black;
+}
+
+.eyebrow::before {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: -70px;
+  width: 15px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(-40deg);
+}
+
+.eyebrow::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 70px;
+  width: 15px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(40deg);
+}
+
+.eyesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 80px;
+}
+
+.blushWrapper {
+  height: 50px;
+  position: relative;
+  position: relative;
+  top: 80px;
+}
+
+.blush {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  top: -50px;
+  border: 5px solid rgb(215, 60, 18);
+  background-color: rgba(253, 219, 33, 1);
+}
+
+.freck {
+  position: absolute;
+  border: 5px solid rgb(215, 60, 18);
+  border-radius: 50%;
+  top: 5px;
+  left: 35px;
+}
+
+.freck::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 5px solid rgb(215, 60, 18);
+  top: 10px;
+  left: -35px;
+}
+
+.freck::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 5px solid rgb(215, 60, 18);
+  top: 15px;
+  left: 25px;
+}
+
+.blush::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 80px;
+  top: 21px;
+  left: 21px;
+  transform: rotate(25deg);
+  background-color: rgba(253, 219, 33, 1);
+}
+
+.blush::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 45px;
+  left: 30px;
+  transform: rotate(5deg);
+  background-color: rgba(253, 219, 33, 1);
+}
+
+.blush.left {
+  left: 15%;
+}
+
+.blush.right {
+  right: 15%;
+}
+
+.nose {
+  position: absolute;
+  left: 43%;
+  top: -70px;
+  width: 80px;
+  height: 120px;
+  border-radius: 70%;
+  border: 5px solid #000;
+  background-color: rgba(253, 219, 33, 1);
+}
+
+.nose::before {
+  position: absolute;
+  content: "";
+  top: 55%;
+  left: 5%;
+  background-color: rgba(253, 219, 33, 1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.mouthWrapper {
+  position: relative;
+  width: 600px;
+  height: 120px;
+  top: 80px;
+}
+
+.lips {
+  position: absolute;
+  width: 420px;
+  height: 120px;
+  border: 5px solid black;
+  border-radius: 50%/100px 100px 0 0;
+  border-color: black transparent transparent transparent;
+  transform: rotate(180deg);
+  top: -90px;
+  left: 90px;
+}
+
+.lips::before {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 370px;
+  width: 20px;
+  height: 20px;
+  border: 5px solid transparent;
+  border-left: 5px solid black;
+  transform: rotate(30deg);
+}
+
+.lips::after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  left: 34px;
+  width: 20px;
+  height: 20px;
+  border: 5px solid transparent;
+  border-left: 5px solid black;
+  transform: rotate(-25deg);
+}
+
+.tooth {
+  position: absolute;
+  top: 24px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tooth.left {
+  left: 230px;
+  transform: rotate(7deg);
+}
+
+.tooth.right {
+  left: 320px;
+  transform: rotate(-6deg);
+}
+
+.chin {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  top: 90px;
+  left: 220px;
+  border: 5px solid rgb(215, 60, 18);
+  border-radius: 45%;
+}
+
+.chin::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 50px;
+  top: 3px;
+  left: 61px;
+  border: 5px solid rgb(215, 60, 18);
+  border-radius: 50%;
+}
+
+.chin::before {
+  z-index: 99;
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 40px;
+  top: -14px;
+  left: -7px;
+  border: 5px solid rgba(253, 219, 33, 1);
+  background-color: rgba(253, 219, 33, 1);
+}
+
+.suitWrapper {
+  position: absolute;
+  top: 100%;
+  width: 600px;
+  height: 240px;
+  border: 5px solid black;
+  background-color: #fff;
+}
+
+.suitWrapper .triangle {
+  display: inline-block;
+  position: relative;
+  border-top: 70px solid #000;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.suitWrapper .triangle::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: -68px;
+  left: -40px;
+  border-top: 60px solid #fff;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  z-index: 99;
+}
+
+.suitWrapper .triangle.left {
+  left: 0;
+}
+.suitWrapper .triangle.right {
+  right: 0;
+}
+
+.suitWrapper .tie {
+  position: absolute;
+  left: 41.5%;
+  top: 0;
+  width: 100px;
+  height: 180px;
+  /*border: 1px solid red;*/
+}
+
+.suitWrapper .tie .tieTop {
+  box-sizing: content-box;
+  position: relative;
+  left: 3px;
+  width: 35px;
+  height: 0;
+  border: 30px solid rgba(0, 0, 0, 0);
+  border-bottom: 0 solid;
+  border-top: 40px solid #000;
+  z-index: 99;
+}
+
+.suitWrapper .tie .tieTop::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 25px;
+  height: 0;
+  border: 25px solid rgba(0, 0, 0, 0);
+  border-bottom: 0 solid;
+  border-top: 35px solid red;
+}
+
+.suitWrapper .tie .tieBottomInner {
+  position: relative;
+  width: 0;
+  height: 0;
+  border: 50px solid rgba(0, 0, 0, 0);
+  border-bottom: 80px solid #000;
+  top: -80px;
+}
+
+.suitWrapper .tie .tieBottomInner::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 50px solid rgba(0, 0, 0, 0);
+  border-top: 80px solid #000;
+  top: 80px;
+  left: -50px;
+  z-index: 9;
+}
+
+.suitWrapper .tie .tieBottomOut {
+  position: relative;
+  width: 0;
+  height: 0;
+  border: 40px solid rgba(0, 0, 0, 0);
+  border-bottom: 70px solid red;
+  top: -190px;
+  left: 10px;
+}
+
+.suitWrapper .tie .tieBottomOut::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 40px solid rgba(0, 0, 0, 0);
+  border-top: 70px solid red;
+  top: 70px;
+  left: -40px;
+  z-index: 9;
+}
+
+.suitWrapper .pants {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 115px;
+  border-top: 5px solid black;
+  background-color: rgb(187, 120, 49);
+  z-index: 0;
+}
+
+.suitWrapper .pants .belt {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  border-top: 20px dashed black;
+}
+
+.pore {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(174, 172, 12);
+}
+
+.pore-01 {
+  width: 80px;
+  height: 80px;
+  bottom: 50px;
+  left: 30px;
+}
+
+.pore-02 {
+  width: 80px;
+  height: 80px;
+  bottom: 25%;
+  right: 50px;
+}
+
+.pore-03 {
+  width: 30px;
+  height: 30px;
+  bottom: 30%;
+  left: 20px;
+}
+
+.pore-04 {
+  width: 80px;
+  height: 80px;
+  left: 10px;
+  top: 10px;
+}
+
+.pore-05 {
+  width: 30px;
+  height: 30px;
+  top: 8%;
+  right: 25px;
+}
+
+.pore-06 {
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  left: 20px;
+}
+
+.pore-07 {
+  width: 40px;
+  height: 40px;
+  bottom: 12%;
+  right: 40px;
+}
